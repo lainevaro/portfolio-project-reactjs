@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { Button } from "@mui/material";
+import { HashLink as Link } from "react-router-hash-link";
+import { Button, Box, Typography } from "@mui/material";
 import Drawer from "react-modern-drawer";
 import { HamburgerSpin } from "react-animated-burgers";
 
@@ -18,31 +17,35 @@ export const DrawerMenu = () => {
   return (
     <>
       <HamburgerSpin
+        buttonStyle={{ padding: 0 }}
         isActive={isActive}
         toggleButton={toggleDrawer}
-        buttonColor="#171717"
+        buttonColor="#0d0d0d"
         barColor="white"
       />
       <Drawer
+        style={{ height: "100%" }}
         enableOverlay
-        style={{
-          background: "#141414",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
+        className={classes.drawerContainer}
         open={isActive}
         onClose={toggleDrawer}
         direction="left"
       >
-        {config.navLinks.map((item, key) => (
-          <Link key={key} className={classes.drawerLinks} to={item.url}>
-            {item.name}
-          </Link>
-        ))}
-        <Button color="inherit" className={classes.resumeButtonDrawer}>
-          Resume
-        </Button>
+        <Box sx={{ textAlign: "center" }}>
+          {config.navLinks.map((item, key) => (
+            <Link
+              key={key}
+              className={classes.drawerLinks}
+              to={item.url}
+              onClick={toggleDrawer}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Button color="inherit" className={classes.resumeButtonDrawer}>
+            <Typography className={classes.resumeDrawerText}>Resume</Typography>
+          </Button>
+        </Box>
       </Drawer>
     </>
   );

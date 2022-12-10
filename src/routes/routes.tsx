@@ -1,10 +1,6 @@
 import { useContext } from "react";
 
-import {
-  Route,
-  Routes as Navigation,
-  BrowserRouter as Router,
-} from "react-router-dom";
+import { Route, Routes as Navigation, BrowserRouter } from "react-router-dom";
 
 import { MainHome } from "../pages/MainHome";
 import ScrollToTop from "../components/ScrollToTop";
@@ -19,25 +15,15 @@ const Routes = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <>
-          <Router>
-            <Navbar />
-            <ScrollToTop />
-            <Navigation>
-              <Route path="/" element={<MainHome />} />
-            </Navigation>
-            <Footer />
-          </Router>
-        </>
+        <BrowserRouter>
+          <Navbar />
+          <Navigation>
+            <Route path="/" element={<MainHome />} />
+          </Navigation>
+          <ScrollToTop />
+          <Footer />
+        </BrowserRouter>
       )}
-      {/*  <Router>
-        <Navbar />
-        <ScrollToTop />
-        <Navigation>
-          <Route path='/' element={<MainHome />} />
-        </Navigation>
-        <Footer />
-      </Router> */}
     </>
   );
 };

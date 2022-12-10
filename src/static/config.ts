@@ -12,20 +12,24 @@ export const config = {
 
   navLinks: [
     {
+      name: 'Home',
+      url: '#home',
+    },
+    {
       name: 'About',
-      url: '/#about',
+      url: '#about',
     },
     {
       name: 'Experience',
-      url: '/#jobs',
+      url: '#experience',
     },
     {
       name: 'Technologies',
-      url: '/#technologies',
+      url: '#technologies',
     },
     {
       name: 'Contact',
-      url: '/#contact',
+      url: '#contact',
     },
   ],
 }
