@@ -80,7 +80,7 @@ export const staticData = {
       },
       {
         title: "SQL Server",
-        icon: "https://o.remove.bg/downloads/0a6b8c88-0c71-4c0f-9aa7-ca5b3061335f/sql-removebg-preview.png",
+        icon: "https://www.pikpng.com/pngl/b/409-4095243_server-clipart-sql-server-microsoft-sql-server-png.png",
       },
       {
         title: "React JS",

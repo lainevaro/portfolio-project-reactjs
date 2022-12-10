@@ -7,7 +7,6 @@ export const useStyles = makeStyles(() => ({
     flexGrow: 1,
     animation: "fadeInDown",
     animationDuration: "1s",
-    padding: 10
   },
   toolbar: {
     display: "flex",
