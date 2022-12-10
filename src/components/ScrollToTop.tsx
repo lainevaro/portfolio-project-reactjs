@@ -1,14 +1,32 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Box, Fab } from "@mui/material";
+
+import { ArrowUpward } from "@mui/icons-material";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
+  return (
+    <Box
+      m={1}
+      sx={{
+        marginBottom: 2,
+        display: "flex",
+        justifyContent: "flex-end",
+      }}
+    >
+      <Fab
+        sx={{
+          background: "#242424",
+          color: "white",
+          "&:hover": {
+            background: "#393939",
+          },
+        }}
+        aria-label="arrow"
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        <ArrowUpward />
+      </Fab>
+    </Box>
+  );
 };
 
 export default ScrollToTop;

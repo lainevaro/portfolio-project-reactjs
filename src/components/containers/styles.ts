@@ -10,7 +10,7 @@ export const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#171717',
+    backgroundColor: '#0d0d0d',
   },
   content: {
     margin: "0 auto",

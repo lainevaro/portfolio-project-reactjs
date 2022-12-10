@@ -1,30 +1,39 @@
-import { Box } from "@mui/material";
-import { TypeAnimation } from "react-type-animation";
+import { Box, Divider } from "@mui/material";
+import {
+  AboutSection,
+  HomeSection,
+  ContactSection,
+  ExperienceSection,
+  TechnologiesSection,
+} from "../sections";
 
 export const MainHome = () => {
   return (
     <Box
       style={{
         color: "white",
-        margin: 25,
-        animation: "fadeInDown",
-        animationDuration: "1s",
+        padding: 20,
       }}
     >
-      <TypeAnimation
-        color="white"
-        sequence={[
-          "Hi, my name is Alvaro",
-          2000,
-          "I'm a Front end developer",
-          2000,
-          "",
-        ]}
-        wrapper="div"
-        cursor={true}
-        repeat={Infinity}
-        style={{ fontSize: "2em" }}
-      />
+      <section id="home">
+        <HomeSection />
+        <Divider color="#393939" />
+      </section>
+      <section id="about">
+        <AboutSection />
+        <Divider color="#393939" />
+      </section>
+      <section id="experience">
+        <ExperienceSection />
+        <Divider color="#393939" />
+      </section>
+      <section id="technologies">
+        <TechnologiesSection />
+        <Divider color="#393939" />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
     </Box>
   );
 };
