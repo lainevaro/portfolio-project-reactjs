@@ -46,7 +46,7 @@ export const Navbar = () => {
               color="inherit"
               target="_blank"
               className={classes.resumeButton}
-              href={"../../../public/resume.pdf"}
+              href={"/resume.pdf"}
               download>
               <Typography fontSize={13}>Resume</Typography>
             </Button>

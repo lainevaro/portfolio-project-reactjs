@@ -40,7 +40,7 @@ export const ExperienceSection = () => {
             </Typography>
           </Box>
           <Box
-            gap={1}
+            gap={2}
             display={"flex"}
             flexWrap={"wrap"}
             justifyContent={"center"}
