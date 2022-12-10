@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { FONT_FAMILY } from "../../constants";
 
 export const useStyles = makeStyles(() => ({
   resumeButtonDrawer: {
@@ -16,10 +17,10 @@ export const useStyles = makeStyles(() => ({
   },
   resumeDrawerText: {
     fontSize: 25,
-    fontFamily: 'Chivo Mono, monospace !important',
+    fontFamily: FONT_FAMILY,
   },
   drawerLinks: {
-    fontFamily: 'Chivo Mono, monospace !important',
+    fontFamily: FONT_FAMILY,
     display: 'flex',
     justifyContent: 'center',
     marginBottom: 70,

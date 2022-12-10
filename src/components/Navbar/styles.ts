@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import { FONT_FAMILY } from "../../constants";
 
 export const useStyles = makeStyles(() => ({
   appBar: {
@@ -12,8 +13,10 @@ export const useStyles = makeStyles(() => ({
     width: 40
   },
   logoText: {
-    fontFamily: 'Chivo Mono, monospace !important',
+    fontFamily: FONT_FAMILY,
     cursor: 'pointer',
+    textDecoration: 'none',
+    color: 'white',
     transition: '0.2s',
     '&:hover': {
       color: '#1D8ECF',
@@ -28,7 +31,7 @@ export const useStyles = makeStyles(() => ({
   },
   resumeButton: {
     fontSize: 16,
-    fontFamily: 'Chivo Mono, monospace !important',
+    fontFamily: FONT_FAMILY,
     border: "1px solid !important",
     borderRadius: '0px !important',
     borderColor: "white",
@@ -42,7 +45,7 @@ export const useStyles = makeStyles(() => ({
   navLinks: {
     fontSize: 16,
     color: "white",
-    fontFamily: 'Chivo Mono, monospace !important',
+    fontFamily: FONT_FAMILY,
     textDecoration: 'none',
     transition: '0.2s',
     '&:hover': {

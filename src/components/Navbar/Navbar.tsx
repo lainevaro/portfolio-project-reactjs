@@ -14,13 +14,19 @@ export const Navbar = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  
+
   return (
     <AppBar position="sticky" elevation={0} className={classes.appBar}>
-      <Toolbar sx={{display: 'flex', alignItems:"center", justifyContent: 'center'}}>
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', gap: 2}}>
-          <img src={logo} alt="logo" className={classes.logo}/>
-          <Typography className={classes.logoText}>ALVARO-LAINER</Typography>
+      <Toolbar
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Box
+          sx={{ flexGrow: 1, display: "flex", alignItems: "center", gap: 2 }}
+        >
+          <img src={logo} alt="logo" className={classes.logo} />
+          <Link className={classes.logoText} to={"#home"}>
+            ALVARO-LAINER
+          </Link>
         </Box>
         {!isMobile ? (
           <Box className={classes.navItemContainer}>
