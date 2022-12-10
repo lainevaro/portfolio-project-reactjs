@@ -1,11 +1,16 @@
 import { useContext } from "react";
 
-import { Route, Routes as Navigation, BrowserRouter } from "react-router-dom";
+import {
+  Route,
+  Routes as Navigation,
+  BrowserRouter,
+  Navigate,
+} from "react-router-dom";
 
-import { MainHome } from "../pages/MainHome";
 import ScrollToTop from "../components/ScrollToTop";
 import LoaderContext from "../context/loadingContext";
-import { Navbar, Footer, Loader } from "../components";
+import { Navbar, Loader } from "../components";
+import { MainHome } from "../pages";
 
 const Routes = () => {
   const { isLoading } = useContext(LoaderContext);
@@ -19,9 +24,9 @@ const Routes = () => {
           <Navbar />
           <Navigation>
             <Route path="/" element={<MainHome />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Navigation>
           <ScrollToTop />
-          <Footer />
         </BrowserRouter>
       )}
     </>

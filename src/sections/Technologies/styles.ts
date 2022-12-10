@@ -19,7 +19,6 @@ export const useStyles = makeStyles(() => ({
   aboutText: {
     fontFamily: FONT_FAMILY,
     fontSize: '18px !important',
-    fontWeight: '400 !important',
     marginTop: 40,
     marginBottom: 20,
     padding: 20,

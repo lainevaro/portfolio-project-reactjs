@@ -1,62 +1,28 @@
 import { Box, Typography, Grid } from "@mui/material";
 
-import { TypeAnimation } from "react-type-animation";
-
-import coding from "../../assets/lottieJson/coding.json";
 import Lottie from "lottie-react";
+import coding from "../../assets/lottieJson/coding.json";
+import { Typing } from "../../components";
+import { staticData } from "../../static/data";
+
+import { useStyles } from "./styles";
 
 export const HomeSection = () => {
+  const classes = useStyles();
+
   return (
-    <Grid
-      container
-      style={{
-        minHeight: "50vh",
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "center",
-        animation: "backInLeft",
-        animationDuration: "1s",
-      }}
-    >
+    <Grid container className={classes.mainContainer}>
       <Grid item xs={12} sm={6}>
         <Box>
-          <Typography
-            style={{
-              fontFamily: "Chivo Mono, monospace",
-              fontSize: 20,
-              marginBottom: 20,
-              fontWeight: 200,
-            }}
-          >
-            Hi, welcome to my portfolio
+          <Typography className={classes.welcomeText}>
+            {staticData.homeSection.welcome}
           </Typography>
-          <TypeAnimation
-            color="white"
-            sequence={["My name is Alvaro Lainer!", 10000, ""]}
-            wrapper="div"
-            cursor={true}
-            repeat={Infinity}
-            style={{
-              fontSize: 30,
-              fontFamily: "Chivo Mono, monospace",
-              marginBottom: 20,
-              fontWeight: 600,
-            }}
-          />
+          <Typing text={staticData.homeSection.name} />
           <Box>
-            <Typography
-              style={{
-                fontFamily: "Chivo Mono, monospace",
-                fontSize: 25,
-                marginTop: 40,
-                fontWeight: 300,
-              }}
-            >
-              Front-end developer, passionate about web design and modern
-              technologies
+            <Typography className={classes.descriptionText}>
+              {staticData.homeSection.description}
             </Typography>
           </Box>
-
           <Box display={"flex"} justifyContent={"center"}>
             <Lottie loop autoPlay animationData={coding} />
           </Box>

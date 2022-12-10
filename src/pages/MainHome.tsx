@@ -1,4 +1,4 @@
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import {
   AboutSection,
   HomeSection,
@@ -17,19 +17,15 @@ export const MainHome = () => {
     >
       <section id="home">
         <HomeSection />
-        <Divider color="#393939" />
       </section>
       <section id="about">
         <AboutSection />
-        <Divider color="#393939" />
       </section>
       <section id="experience">
         <ExperienceSection />
-        <Divider color="#393939" />
       </section>
       <section id="technologies">
         <TechnologiesSection />
-        <Divider color="#393939" />
       </section>
       <section id="contact">
         <ContactSection />

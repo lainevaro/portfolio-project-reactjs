@@ -6,15 +6,11 @@ export const config = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://www.linkedin.com/in/alvarolainer',
     },
   ],
 
   navLinks: [
-    {
-      name: 'Home',
-      url: '#home',
-    },
     {
       name: 'About',
       url: '#about',
