@@ -3,10 +3,10 @@ import { makeStyles } from "@mui/styles";
 export const useStyles = makeStyles(() => ({
   mainContainer: {
     position: 'fixed',
-    bottom: '50px',
-    right: '50px',
-    height: '50px',
-    width: '50px'
+    bottom: '50px !important',
+    right: '50px !important',
+    height: '50px !important',
+    width: '50px !important'
   },
   icon: {
     background: "#242424 !important",
