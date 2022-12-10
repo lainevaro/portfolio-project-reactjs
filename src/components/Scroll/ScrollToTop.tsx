@@ -20,7 +20,7 @@ export const ScrollToTop = () => {
         }
       });
     };
-  }, []);
+  }, [backToUp]);
 
   const scrollUp = () => {
     window.scrollTo({
