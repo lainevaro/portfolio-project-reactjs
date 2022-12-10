@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import { FONT_FAMILY } from "../../constants";
+import { FONT_FAMILY } from "../../../constants";
 
 export const useStyles = makeStyles(() => ({
   mainContainer: {
