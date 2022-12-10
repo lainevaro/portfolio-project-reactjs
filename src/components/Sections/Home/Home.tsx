@@ -1,9 +1,12 @@
 import { Box, Typography, Grid } from "@mui/material";
 
 import Lottie from "lottie-react";
-import coding from "../../assets/lottieJson/coding.json";
-import { Typing } from "../../components";
-import { staticData } from "../../static/data";
+
+import coding from "../../../assets/lottieJson/coding.json";
+
+import { Typing } from "../..";
+
+import { staticData } from "../../../static";
 
 import { useStyles } from "./styles";
 

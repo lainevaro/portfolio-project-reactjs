@@ -1,15 +1,4 @@
 export const config = {
-  socialMedia: [
-    {
-      name: 'GitHub',
-      url: 'https://github.com/lainevaro',
-    },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/alvarolainer',
-    },
-  ],
-
   navLinks: [
     {
       name: 'About',

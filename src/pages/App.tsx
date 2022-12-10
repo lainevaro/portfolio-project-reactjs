@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { useState } from "react";
 
 import Routes from "../routes/routes";
 
-import LoaderContext from "../context/loadingContext";
+import GlobalContext from "../context/globalContext";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <LoaderContext.Provider value={{ isLoading, setIsLoading }}>
+    <GlobalContext.Provider value={{ isLoading, setIsLoading }}>
       <Routes />
-    </LoaderContext.Provider>
-  )
+    </GlobalContext.Provider>
+  );
 }
 
 export default App;

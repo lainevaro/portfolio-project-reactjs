@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import { Button, Box, Typography } from "@mui/material";
 import Drawer from "react-modern-drawer";
+import { HashLink as Link } from "react-router-hash-link";
+
 import { HamburgerSpin } from "react-animated-burgers";
+import { Button, Box, Typography } from "@mui/material";
 
 import { useStyles } from "./styles";
 import { config } from "../../static/config";
@@ -42,8 +43,14 @@ export const DrawerMenu = () => {
               {item.name}
             </Link>
           ))}
-          <Button color="inherit" className={classes.resumeButtonDrawer}>
-            <Typography className={classes.resumeDrawerText}>Resume</Typography>
+          <Button
+            color="inherit"
+            target="_blank"
+            className={classes.resumeButtonDrawer}
+            href={"../../../public/resume.pdf"}
+            download
+          >
+            <Typography fontSize={13}>Resume</Typography>
           </Button>
         </Box>
       </Drawer>

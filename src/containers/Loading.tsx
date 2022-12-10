@@ -1,6 +1,6 @@
 import { ReactElement, useContext } from "react";
 import { motion } from "framer-motion";
-import LoaderContext from "../../context/loadingContext";
+import LoaderContext from "../context/globalContext";
 import { useStyles } from "./styles";
 
 interface Props {

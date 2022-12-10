@@ -9,10 +9,22 @@ export const useStyles = makeStyles(() => ({
     animationDuration: "1s",
     padding: 10
   },
+  toolbar: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  mainBox: {
+    flexGrow: 1,
+    display: "flex",
+    alignItems: "center",
+    gap: 2
+  },
   logo: {
     width: 40
   },
   logoText: {
+    marginLeft: 10,
     fontFamily: FONT_FAMILY,
     cursor: 'pointer',
     textDecoration: 'none',
@@ -40,7 +52,8 @@ export const useStyles = makeStyles(() => ({
       color: '#1D8ECF',
     },
     animation: 'fadeInDown',
-    animationDuration: '1s'
+    animationDuration: '1s',
+    textDecoration: "none", color: "white"
   },
   navLinks: {
     fontSize: 16,

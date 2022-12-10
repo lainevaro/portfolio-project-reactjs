@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useRef, MutableRefObject } from "react";
 
 export default createContext({
   isLoading: true,
