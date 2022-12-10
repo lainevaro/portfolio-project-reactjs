@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import { useStyles } from "./styles";
 
+import { SCROLL_Y } from "../../constants";
 import { ArrowUpward } from "@mui/icons-material";
 
 export const ScrollToTop = () => {
@@ -11,16 +12,10 @@ export const ScrollToTop = () => {
   const [backToUp, setBackToUp] = useState(false);
 
   useEffect(() => {
-    return () => {
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          setBackToUp(true);
-        } else {
-          setBackToUp(false);
-        }
-      });
-    };
-  }, [backToUp]);
+    window.addEventListener("scroll", () => {
+      window.scrollY > SCROLL_Y ? setBackToUp(true) : setBackToUp(false);
+    });
+  }, []);
 
   const scrollUp = () => {
     window.scrollTo({
