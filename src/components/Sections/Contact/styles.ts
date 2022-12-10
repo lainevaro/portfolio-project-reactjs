@@ -7,7 +7,7 @@ export const useStyles = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    animation: "backInRight",
+    animation: "bounceIn",
     animationDuration: "2s",
     padding: 20,
     textAlign: "match-parent",

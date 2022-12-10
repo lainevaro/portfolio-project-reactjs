@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import Drawer from "react-modern-drawer";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -18,28 +19,26 @@ export const DrawerMenu = () => {
   return (
     <>
       <HamburgerSpin
-        buttonStyle={{ padding: 0 }}
-        isActive={isActive}
-        toggleButton={toggleDrawer}
-        buttonColor="#0d0d0d"
         barColor="white"
+        isActive={isActive}
+        buttonColor="#0d0d0d"
+        toggleButton={toggleDrawer}
+        buttonStyle={{ padding: 0 }}
       />
       <Drawer
-        style={{ height: "100%" }}
         enableOverlay
-        className={classes.drawerContainer}
         open={isActive}
-        onClose={toggleDrawer}
         direction="left"
-      >
+        onClose={toggleDrawer}
+        style={{ height: "100%" }}
+        className={classes.drawerContainer}>
         <Box sx={{ textAlign: "center" }}>
           {config.navLinks.map((item, key) => (
             <Link
               key={key}
               className={classes.drawerLinks}
               to={item.url}
-              onClick={toggleDrawer}
-            >
+              onClick={toggleDrawer}>
               {item.name}
             </Link>
           ))}
@@ -48,8 +47,7 @@ export const DrawerMenu = () => {
             target="_blank"
             className={classes.resumeButtonDrawer}
             href={"../../../public/resume.pdf"}
-            download
-          >
+            download>
             <Typography fontSize={13}>Resume</Typography>
           </Button>
         </Box>

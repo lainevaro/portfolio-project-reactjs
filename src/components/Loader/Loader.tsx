@@ -1,6 +1,7 @@
-import { LoaderContainer } from "../../containers/Loading";
-import loader from '../../assets/lottieJson/loading.json';
 import Lottie from "lottie-react";
+
+import loader from '../../assets/lottieJson/loading.json';
+import { LoaderContainer } from "../../containers/Loading";
 
 export const Loader = () => {
   return (

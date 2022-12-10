@@ -1,11 +1,12 @@
 import { makeStyles } from "@mui/styles";
-import { FONT_FAMILY } from "../../constants";
 
 export const useStyles = makeStyles(() => ({
   mainContainer: {
-    marginBottom: 2,
-    display: "flex",
-    justifyContent: "flex-end",
+    position: 'fixed',
+    bottom: '50px',
+    right: '50px',
+    height: '50px',
+    width: '50px'
   },
   icon: {
     background: "#242424 !important",

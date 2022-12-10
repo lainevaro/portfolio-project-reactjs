@@ -14,23 +14,25 @@ export const HomeSection = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.mainContainer}>
-      <Grid item xs={12} sm={6}>
-        <Box>
-          <Typography className={classes.welcomeText}>
-            {staticData.homeSection.welcome}
-          </Typography>
-          <Typing text={staticData.homeSection.name} />
+    <section id="home">
+      <Grid container className={classes.mainContainer}>
+        <Grid item xs={12} sm={6}>
           <Box>
-            <Typography className={classes.descriptionText}>
-              {staticData.homeSection.description}
+            <Typography className={classes.welcomeText}>
+              {staticData.homeSection.welcome}
             </Typography>
+            <Typing text={staticData.homeSection.name} />
+            <Box>
+              <Typography className={classes.descriptionText}>
+                {staticData.homeSection.description}
+              </Typography>
+            </Box>
+            <Box display={"flex"} justifyContent={"center"}>
+              <Lottie loop autoPlay animationData={coding} />
+            </Box>
           </Box>
-          <Box display={"flex"} justifyContent={"center"}>
-            <Lottie loop autoPlay animationData={coding} />
-          </Box>
-        </Box>
+        </Grid>
       </Grid>
-    </Grid>
+    </section>
   );
 };

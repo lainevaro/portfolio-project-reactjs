@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Box } from "@mui/material";
 
 import { Navbar, ScrollToTop } from "../../components";
@@ -14,32 +13,17 @@ import {
 import { useStyles } from "./styles";
 
 export const MainHome = () => {
-  const ref: any = useRef(null);
   const classes = useStyles();
-
-  const scrollTo = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <>
-      <Navbar scrollTo={scrollTo} />
+      <Navbar />
       <Box className={classes.mainContainer}>
-        <section id="home">
-          <HomeSection />
-        </section>
-        <section id="about">
-          <AboutSection ref={ref} />
-        </section>
-        <section id="experience">
-          <ExperienceSection />
-        </section>
-        <section id="technologies">
-          <TechnologiesSection />
-        </section>
-        <section id="contact">
-          <ContactSection />
-        </section>
+        <HomeSection />
+        <AboutSection />
+        <ExperienceSection />
+        <TechnologiesSection />
+        <ContactSection />
       </Box>
       <ScrollToTop />
     </>

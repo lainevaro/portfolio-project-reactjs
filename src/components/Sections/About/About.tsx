@@ -4,20 +4,15 @@ import Grid from "@mui/material/Grid";
 
 import portfolioImage from "../../../assets/images/portfolioImage.jpeg";
 
+import { Typing } from "../..";
 import { useStyles } from "./styles";
 import { staticData } from "../../../static/data";
-import { Typing } from "../..";
-import { forwardRef } from "react";
 
-interface Props {
-  ref: null;
-}
-
-const AboutSection = ({ ref }: Props) => {
+export const AboutSection = () => {
   const classes = useStyles();
 
   return (
-    <div ref={ref}>
+    <section id="about">
       <Grid container className={classes.mainContainer}>
         <Grid item xs={12} sm={6}>
           <Box display={"flex"} alignItems={"center"}>
@@ -33,8 +28,6 @@ const AboutSection = ({ ref }: Props) => {
           <img src={portfolioImage} alt="image" className={classes.image} />
         </Grid>
       </Grid>
-    </div>
+    </section>
   );
 };
-
-export default forwardRef(AboutSection);

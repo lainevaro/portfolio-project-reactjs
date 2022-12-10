@@ -26,57 +26,56 @@ export const ExperienceSection = () => {
   };
 
   return (
-    <Grid container className={classes.mainContainer}>
-      <Grid item xs={12} sm={12}>
-        <Box display={"flex"} alignItems={"center"}>
-          <Typing text={staticData.experienceSection.title} />
-        </Box>
-        <Box>
-          <Typography textAlign={"center"} className={classes.descriptionText}>
-            {staticData.experienceSection.text}
-          </Typography>
-        </Box>
-        <Box
-          gap={1}
-          display={"flex"}
-          flexWrap={"wrap"}
-          justifyContent={"center"}
-          marginX={isMobile ? 0 : 2}
-        >
-          {staticData.experienceSection.projectList.map((item, key) => (
-            <Card
-              key={key}
-              elevation={0}
-              className={classes.card}
-              onClick={() => routeTo(item.link)}
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={item.img}
-                  alt={item.title}
-                />
-                <CardContent>
-                  <Typography
-                    className={classes.cardText}
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                  >
-                    {item.title}
-                  </Typography>
-                  <Typography className={classes.techText} color="white">
+    <section id="experience">
+      <Grid container className={classes.mainContainer}>
+        <Grid item xs={12} sm={12}>
+          <Box display={"flex"} alignItems={"center"}>
+            <Typing text={staticData.experienceSection.title} />
+          </Box>
+          <Box>
+            <Typography
+              textAlign={"center"}
+              className={classes.descriptionText}>
+              {staticData.experienceSection.text}
+            </Typography>
+          </Box>
+          <Box
+            gap={1}
+            display={"flex"}
+            flexWrap={"wrap"}
+            justifyContent={"center"}
+            marginX={isMobile ? 0 : 2}>
+            {staticData.experienceSection.projectList.map((item, key) => (
+              <Card
+                key={key}
+                elevation={0}
+                className={classes.card}
+                onClick={() => routeTo(item.link)}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={item.img}
+                    alt={item.title}
+                  />
+                  <CardContent>
+                    <Typography
+                      className={classes.cardText}
+                      gutterBottom
+                      variant="h5"
+                      component="div">
+                      {item.title}
+                    </Typography>
                     {item.technologies.map((item, key) => (
                       <Chip label={item} key={key} className={classes.chip} />
                     ))}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ))}
-        </Box>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            ))}
+          </Box>
+        </Grid>
       </Grid>
-    </Grid>
+    </section>
   );
 };
